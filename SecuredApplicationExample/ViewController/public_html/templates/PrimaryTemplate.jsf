@@ -16,16 +16,29 @@
     </af:xmlContent>
     <af:panelStretchLayout topHeight="50px" id="pt_psl1" inlineStyle="margin:10px;">
         <f:facet name="top">
-            <af:panelHeader text="Secure ADF App Revisited" id="pt_ph1">
-                <f:facet name="context"/>
-                <f:facet name="menuBar">
-                    <af:goLink text="logout" id="pt_gl1"
-                               destination="/adfAuthentication?logout=true&amp;end_url=/faces/index"/>
-                </f:facet>
-                <f:facet name="toolbar"/>
-                <f:facet name="legend"/>
-                <f:facet name="info"/>
-            </af:panelHeader>
+            <af:panelGroupLayout id="pt_pgl1">
+                <af:popup childCreation="deferred" autoCancel="disabled" id="pop_profile">
+                    <af:dialog id="pt_d1" type="ok">
+                        <f:facet name="buttonBar"/>
+                    </af:dialog>
+                </af:popup>
+                <af:panelHeader text="Secure ADF App Revisited" id="pt_ph1">
+                    <f:facet name="context"/>
+                    <f:facet name="menuBar">
+                        <af:group id="pt_g1">
+                            <af:goLink text="#{securityContext.userName}" id="gl_profile">
+                                <af:showPopupBehavior popupId="pop_profile" triggerType="click"/>
+                            </af:goLink>
+                            <af:spacer width="10" height="10" id="pt_s1"/>
+                            <af:goLink text="logout" id="pt_gl1"
+                                       destination="/adfAuthentication?logout=true&amp;end_url=/faces/index"/>
+                        </af:group>
+                    </f:facet>
+                    <f:facet name="toolbar"/>
+                    <f:facet name="legend"/>
+                    <f:facet name="info"/>
+                </af:panelHeader>
+            </af:panelGroupLayout>
         </f:facet>
         <f:facet name="center">
             <!-- id="af_twocol_right_full_header_splitandstretched"   -->
