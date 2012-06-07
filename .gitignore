@@ -3,3 +3,9 @@ SecuredApplicationExample/.data/00000000/00000000.jdb
 SecuredApplicationExample/.data/Model/00000000/00000000.jdb
 SecuredApplicationExample/.data/Model/00000000/je.lck
 SecuredApplicationExample/.data/ViewController/00000000/00000000.jdb
+SecuredApplicationExample/ViewController/classes/.data/ViewController.cdi_javac
+SecuredApplicationExample/ViewController/classes/auth/loginPageDef.xml
+SecuredApplicationExample/ViewController/classes/me/chadthompson/adf/secureapp/auth/LoginAuthBean.class
+SecuredApplicationExample/ViewController/classes/me/chadthompson/adf/secureapp/view/DataBindings.cpx
+SecuredApplicationExample/ViewController/classes/me/chadthompson/adf/secureapp/view/pageDefs/indexPageDef.xml
+SecuredApplicationExample/ViewController/classes/me/chadthompson/adf/secureapp/view/ViewControllerBundle.properties
