@@ -14,36 +14,25 @@
             </afc:facet>
         </afc:component>
     </af:xmlContent>
-    <af:panelBorderLayout id="pt_pbl1">
-        <f:facet name="start">
-            <af:spacer width="10" height="10" id="pt_s1"/>
-        </f:facet>
-        <f:facet name="bottom"/>
-        <f:facet name="end">
-            <af:spacer width="10" height="10" id="pt_s2"/>
-        </f:facet>
+    <af:panelStretchLayout topHeight="50px" id="pt_psl1" inlineStyle="margin:10px;">
         <f:facet name="top">
-            <af:spacer width="10" height="10" id="pt_s3"/>
+            <af:panelHeader text="Secure ADF App Revisited" id="pt_ph1">
+                <f:facet name="context"/>
+                <f:facet name="menuBar">
+                    <af:goLink text="logout" id="pt_gl1"
+                               destination="/adfAuthentication?logout=true&amp;end_url=/faces/index"/>
+                </f:facet>
+                <f:facet name="toolbar"/>
+                <f:facet name="legend"/>
+                <f:facet name="info"/>
+            </af:panelHeader>
         </f:facet>
-        <af:panelStretchLayout topHeight="50px" id="pt_psl1">
-            <f:facet name="top">
-                <af:panelHeader text="Secure ADF App Revisited" id="pt_ph1">
-                    <f:facet name="context"/>
-                    <f:facet name="menuBar">
-                        <af:goLink text="logout" id="pt_gl1"/>
-                    </f:facet>
-                    <f:facet name="toolbar"/>
-                    <f:facet name="legend"/>
-                    <f:facet name="info"/>
-                </af:panelHeader>
-            </f:facet>
-            <f:facet name="center">
-                <!-- id="af_twocol_right_full_header_splitandstretched"   -->
-                <af:panelSplitter orientation="horizontal" splitterPosition="100" positionedFromEnd="true" id="pt_ps1">
-                    <f:facet name="first"/>
-                    <f:facet name="second"/>
-                </af:panelSplitter>
-            </f:facet>
-        </af:panelStretchLayout>
-    </af:panelBorderLayout>
+        <f:facet name="center">
+            <!-- id="af_twocol_right_full_header_splitandstretched"   -->
+            <af:panelSplitter orientation="horizontal" splitterPosition="100" positionedFromEnd="true" id="pt_ps1">
+                <f:facet name="first"/>
+                <f:facet name="second"/>
+            </af:panelSplitter>
+        </f:facet>
+    </af:panelStretchLayout>
 </af:pageTemplateDef>

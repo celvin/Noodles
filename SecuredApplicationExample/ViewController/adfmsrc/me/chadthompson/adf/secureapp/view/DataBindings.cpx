@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="11.1.2.61.83" id="DataBindings"
+             SeparateXMLFiles="false" Package="me.chadthompson.adf.secureapp.view" ClientType="Generic">
+  <pageMap>
+    <page path="/auth/login.jsf" usageId="me_chadthompson_adf_secureapp_view_loginPageDef"/>
+    <page path="/index.jsf" usageId="me_chadthompson_adf_secureapp_view_indexPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="me_chadthompson_adf_secureapp_view_loginPageDef" path="auth.loginPageDef"/>
+    <page id="me_chadthompson_adf_secureapp_view_indexPageDef"
+          path="me.chadthompson.adf.secureapp.view.pageDefs.indexPageDef"/>
+  </pageDefinitionUsages>
+</Application>

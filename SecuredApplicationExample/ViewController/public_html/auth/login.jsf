@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:h="http://java.sun.com/jsf/html">
+    <c:set var="viewcontrollerBundle" value="#{adfBundle['me.chadthompson.adf.secureapp.view.ViewControllerBundle']}"/>
+    <af:document title="login.jsf" id="d1">
+        <af:form id="f1">
+            <af:panelBox text="PanelBox1" id="pb1" showHeader="never"
+                         inlineStyle="width:325px; margin-left:auto; margin-right:auto; height:350px;margin-top:10px;" showDisclosure="false" type="stretch"
+                         background="medium">
+                <f:facet name="toolbar"/>
+                <af:panelGroupLayout id="pgl1" inlineStyle="text-align:center;">
+                    <af:image source="/images/ACorpLogo.png" shortDesc="Corporate Logo" id="img_logo"
+                              inlineStyle="width:300px; height:150px; text-align:center; vertical-align:middle;"/>
+                </af:panelGroupLayout>
+                <af:panelFormLayout id="pfl1">
+                    <f:facet name="footer">
+                        <af:commandButton text="Login" id="cb_submit" action="#{LoginAuthBean.performLogin}"/>
+                    </f:facet>
+                    <af:inputText label="Username" id="it_name" value="#{LoginAuthBean.username}" required="true"/>
+                    <af:inputText label="Password" id="it_pass" value="#{LoginAuthBean.password}" required="true"/>
+                </af:panelFormLayout>
+                <af:panelGroupLayout id="pg_links" inlineStyle="text-align:center;" halign="center" layout="horizontal">
+                    <af:goLink text="about" id="gl_about">
+                        <af:showPopupBehavior popupId="p1" triggerType="click"/>
+                    </af:goLink>
+                </af:panelGroupLayout>
+                <af:popup childCreation="deferred" autoCancel="disabled" id="p1">
+                    <af:dialog id="d_about" type="ok" title="About This App" contentWidth="400" contentHeight="300">
+                        <f:facet name="buttonBar"/>
+                        <af:outputFormatted value="#{viewcontrollerBundle.ABOUTTEXT}" id="of1"/>
+                    </af:dialog>
+                </af:popup>
+            </af:panelBox>
+        </af:form>
+    </af:document>
+</f:view>
