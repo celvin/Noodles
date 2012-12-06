@@ -4,6 +4,8 @@ import javax.faces.event.ActionEvent;
 
 import oracle.adf.share.logging.ADFLogger;
 
+// A sipmle change.
+
 public class LoggingBean {
     
     private ADFLogger _logger = 
