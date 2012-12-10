@@ -4,6 +4,8 @@ import javax.faces.event.ActionEvent;
 
 import oracle.adf.share.logging.ADFLogger;
 
+// Making a secondary change.  I can continue working on my branch.
+
 public class LoggingBean {
     
     private ADFLogger _logger = 
