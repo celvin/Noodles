@@ -4,7 +4,9 @@ import javax.faces.event.ActionEvent;
 
 import oracle.adf.share.logging.ADFLogger;
 
-// A sipmle change.  Let's try to push this upstream to GitHub. 
+// A simple change.  Let's try to push this upstream to GitHub. 
+// Making a secondary change.  I can continue working on my branch.
+
 
 public class LoggingBean {  
     
