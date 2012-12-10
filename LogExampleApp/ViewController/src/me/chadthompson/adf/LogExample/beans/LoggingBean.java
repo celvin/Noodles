@@ -4,9 +4,9 @@ import javax.faces.event.ActionEvent;
 
 import oracle.adf.share.logging.ADFLogger;
 
-// A sipmle change.
+// A sipmle change.  Let's try to push this upstream to GitHub. 
 
-public class LoggingBean {
+public class LoggingBean {  
     
     private ADFLogger _logger = 
         ADFLogger.createADFLogger(LoggingBean.class);
